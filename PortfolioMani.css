@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    font-family: 'Inter', 'Poppins', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+i {
+    margin-right: auto;
+}
+
+.one {
+    margin-right: auto;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.98) 0%, rgba(118, 75, 162, 0.98) 100%);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-brand h2 {
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 150px 50px 100px 50px;
+    min-height: 90vh;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.image img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.5);
+    transition: transform 0.3s ease;
+    border: 5px solid white;
+    background: white;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.6);
+}
+
+.name {
+    font-size: x-large;
+    text-align: center;
+    margin: 20px;
+}
+
+.name h1 {
+    font-size: 3.5em;
+    margin: 10px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+
+.name p {
+    font-size: 1.4em;
+    color: #2d3748;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.social-links a:nth-child(3) {
+    background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%);
+    box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
+}
+
+.social-links a:nth-child(4) {
+    background: linear-gradient(135deg, #34a853 0%, #2d8f47 100%);
+    box-shadow: 0 4px 15px rgba(52, 168, 83, 0.4);
+}
+
+.social-links a:nth-child(2) {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    box-shadow: 0 4px 15px rgba(45, 55, 72, 0.4);
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.About {
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    margin: 100px auto 70px auto;
+    padding: 50px;
+    font-size: x-large;
+    max-width: 1200px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    position: relative;
+    z-index: 1;
+    scroll-margin-top: 100px;
+}
+
+.About h2 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 25px;
+    font-size: 2.8em;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.About p {
+    line-height: 1.9;
+    color: #4a5568;
+    font-size: 1.1em;
+}
+
+.Skills {
+    font-size: x-large;
+    text-align: center;
+}
+
+.Skills h2 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box1, .box2, .box3, .box4 {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    border: 2px solid #e2e8f0;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: medium;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.box1:hover, .box2:hover, .box3:hover, .box4:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.box1:hover h2, .box2:hover h2, .box3:hover h2, .box4:hover h2,
+.box1:hover p, .box2:hover p, .box3:hover p, .box4:hover p {
+    color: white;
+}
+
+.Containers {
+    border: none;
+    border-radius: 25px;
+    margin: 70px auto;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    position: relative;
+    z-index: 1;
+    scroll-margin-top: 100px;
+}
+
+.allbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.project1, .project2, .project3 {
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    margin: 40px;
+    padding: 35px;
+    font-size: larger;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project1:hover, .project2:hover, .project3:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+    border-color: #667eea;
+}
+
+/* Project link/button refinements: style anchor wrappers and improve hover feedback */
+.project1 a, .project2 a, .project3 a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.project1 a button, .project2 a button, .project3 a button {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.project1:hover a button, .project2:hover a button, .project3:hover a button {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(102, 126, 234, 0.45);
+}
+
+.project1 a button:focus, .project2 a button:focus, .project3 a button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+}
+
+button {
+    padding: 14px 35px;
+    margin: 5px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.work {
+    border: none;
+    border-radius: 25px;
+    margin: 70px auto;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    position: relative;
+    z-index: 1;
+    scroll-margin-top: 100px;
+}
+
+.work h1 {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Contact {
+    border: none;
+    border-radius: 25px;
+    margin: 70px auto;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    font-size: larger;
+    max-width: 600px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    position: relative;
+    z-index: 1;
+    scroll-margin-top: 100px;
+}
+
+.Contact h2 {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.Contact input,
+.Contact textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.Contact input:focus,
+.Contact textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.Contact textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.sendbutton {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+footer {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: white;
+    margin: 60px 0 0 0;
+    padding: 40px;
+    text-align: center;
+    font-size: larger;
+    position: relative;
+    z-index: 1;
+}
+
+footer h5 {
+    margin: 0;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .navbar nav {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .nav-brand h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .navbar ul li {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .image {
+        margin: 20px auto;
+    }
+
+    .image img {
+        width: 250px;
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .name {
+        margin-top: 20px;
+        font-size: large;
+    }
+
+    .name h1 {
+        font-size: 2em;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .About,
+    .Containers,
+    .work,
+    .Contact {
+        margin: 20px;
+        padding: 20px;
+        width: auto;
+    }
+
+    .allbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        margin: 15px;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .Contact {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sendbutton {
+        width: 100%;
+    }
+
+    footer {
+        margin: 20px 0 0 0;
+        padding: 20px;
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name h1 {
+        font-size: 1.5em;
+    }
+
+    .About h2,
+    .Skills h2,
+    .work h1,
+    .Contact h2 {
+        font-size: 1.8em;
+    }
+
+    .image img {
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+    }
+}
+
